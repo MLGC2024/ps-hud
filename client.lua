@@ -1111,6 +1111,7 @@ CreateThread(function() -- Speeding
                 local stressSpeed = seatbeltOn and config.MinimumSpeed or config.MinimumSpeedUnbuckled
                 if speed >= stressSpeed then
                     TriggerServerEvent('hud:server:GainStress', math.random(1, 3))
+                    TriggerEvent('wais:addmissionxp:speedstress', 1) --added by pamela for wais battlepass
                 end
             end
         end
